@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
 
 import Project from "../components/Project"
+import { Nav } from "../components/Nav"
 import Seo from "../components/seo"
 
 const Home = styled(Project)`
@@ -16,6 +17,7 @@ const Project2 = styled(Project)`
 
 const IndexPage = () => (
   <>
+  <Nav />
   <Home backgroundColor="lightblue" top="1000" left="2000">
     <Seo title="Homer" />
     <h1>Landing Page</h1>

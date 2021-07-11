@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'gatsby';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 
 export const Wrapper = styled.div`
     height: 50px;
@@ -31,15 +32,11 @@ export const StyledLink = styled(Link)`
 function Navigation() {
     return (
         <Wrapper>
-        <Nav className="Nav"><h3>Navigation</h3>
+        <Nav><h3>Navigation</h3>
             <NavLinks>
-                <li><StyledLink to="/Test1">Test1</StyledLink></li>
-                <li><StyledLink to="/Test2">Test2</StyledLink></li>
-                <li><StyledLink to="/Test3">Test3</StyledLink></li>
-                <li><StyledLink to="/">Home</StyledLink></li>
-                <li><HashLink smooth to={"#Test1"}>Hash1</HashLink></li>
-                <li><HashLink smooth to={'#Test2'}>Hash2</HashLink></li>
-                <li><HashLink smooth to={'#Test3'}>Hash3</HashLink></li>
+                <li><AnchorLink smooth to={"#Test1"}>Hash1</AnchorLink></li>
+                <li><AnchorLink smooth to={'#Test2'}>Hash2</AnchorLink></li>
+                <li><AnchorLink smooth to={'#Test3'}>Hash3</AnchorLink></li>
             </NavLinks>
         </Nav>
         </Wrapper>
